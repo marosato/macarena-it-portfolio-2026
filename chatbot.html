@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MacarenaBot 🤖</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; padding: 20px; }
+    #chatbox {
+      width: 100%; max-width: 500px; height: 400px;
+      background: #fff; border-radius: 10px; padding: 10px;
+      margin: 0 auto; overflow-y: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .user { text-align: right; margin: 5px 0; color: #333; }
+    .bot { text-align: left; margin: 5px 0; color: #0a5; }
+    #controls { display: flex; justify-content: center; margin-top: 10px; }
+    input[type="text"] {
+      width: 70%; padding: 10px; border-radius: 5px;
+      border: 1px solid #ccc; margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px; background: #0a5;
+      color: white; border: none; border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Chat con MacarenaBot 🤖</h2>
+  <div id="chatbox"></div>
+
+  <div id="controls">
+    <input type="text" id="userInput" placeholder="Escribí tu pregunta...">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+  <script>
+    const token = "OA4QH7R5ROIWX4DZTC4FQIL6AWY26SQX"; // 🔐 Poné tu token de Wit.ai acá
+
+    async function getWitResponse(message) {
+      const response = await fetch("https://api.wit.ai/message?v=20240727&q=" + encodeURIComponent(message), {
+        headers: {
+          "Authorization": "Bearer " + token
+        }
+      });
+      return await response.json();
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+
+      appendMessage("user", message);
+      input.value = "";
+
+      try {
+        const witData = await getWitResponse(message);
+        const intent = witData.intents[0]?.name || "";
+        let reply = "Lo siento, no entiendo eso todavía.";
+
+        // 👉 Acá van todas las respuestas por intención:
+        if (intent === "info_estudios") {
+          reply = "Estoy estudiando para ser Analista de Sistemas en ORT y también Ingeniería en Informática en UADE.";
+        } else if (intent === "info_experiencia") {
+          reply = "Sí, tengo experiencia en soporte técnico dentro de una holding fintech.";
+        } else if (intent === "saludo") {
+          reply = "¡Hola! Soy MacarenaBot, ¿en qué te puedo ayudar?";
+        } else if (intent === "despedida") {
+          reply = "¡Hasta luego! 😊";
+        } else if (intent === "linkedin") {
+          reply = "Podés contactarme o ver mi perfil profesional acá 👉 [LinkedIn](https://www.linkedin.com/in/TU_USUARIO)";
+        } else if (intent === "proyectos") {
+          reply = "Sí, podés ver mis proyectos personales en esta misma web. También tengo código subido en GitHub 👉 https://github.com/TU_USUARIO";
+        }
+
+        appendMessage("bot", reply);
+      } catch (error) {
+        console.error("Error al conectar con Wit.ai:", error);
+        appendMessage("bot", "Ups... hubo un problema al responder.");
+      }
+    }
+
+    function appendMessage(sender, text) {
+      const chatbox = document.getElementById("chatbox");
+      const messageElem = document.createElement("div");
+      messageElem.className = sender;
+
+      // 👇 Esto permite mostrar links correctamente (si usás Markdown manual simple)
+      if (text.includes("[") && text.includes("](")) {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, `<a href="$2" target="_blank">$1</a>`);
+        messageElem.innerHTML = tempDiv.innerHTML;
+      } else {
+        messageElem.textContent = text;
+      }
+
+      chatbox.appendChild(messageElem);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
