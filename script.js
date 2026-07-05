@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     setupNavigation();
+    setupInteractiveCards();
+    setupReveal();
     setupChatbot();
 });
 
@@ -23,6 +25,48 @@ function setupNavigation() {
     });
 }
 
+function setupInteractiveCards() {
+    const cards = document.querySelectorAll(".spotlight-card");
+    if (cards.length === 0) return;
+
+    cards.forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+            card.style.setProperty("--spot-x", `${x}%`);
+            card.style.setProperty("--spot-y", `${y}%`);
+        });
+    });
+}
+
+function setupReveal() {
+    const items = document.querySelectorAll(
+        ".signal-grid article, .experience-grid article, .project-card, .studio-hero, .spotlight-card, .studio-cta, .tech-groups article, .credential-list article"
+    );
+
+    if (items.length === 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        items.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
+
+    items.forEach((item) => item.classList.add("reveal-item"));
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.18 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+}
+
 function setupChatbot() {
     const toggle = document.getElementById("chatbot-toggle");
     const box = document.getElementById("chatbot-box");
@@ -37,6 +81,7 @@ function setupChatbot() {
         "¿Quién eres?",
         "¿Qué tecnologías manejas?",
         "¿Tenés experiencia laboral?",
+        "¿Qué es MAR Studio?",
         "¿Qué estudias?",
         "¿Qué cursos hiciste?",
         "¿Cómo puedo contactarte?"
@@ -45,15 +90,19 @@ function setupChatbot() {
     const answers = [
         {
             match: ["quién eres", "quien eres", "quién sos", "quien sos"],
-            text: "Soy Macarena Ayelén Rosato, profesional IT orientada a Sistemas, Soporte Técnico L2, backend, datos, automatización e inteligencia artificial."
+            text: "Soy Macarena Ayelén Rosato, profesional IT orientada a Sistemas, soporte técnico, backend, datos, automatización e inteligencia artificial."
         },
         {
             match: ["tecnologías", "tecnologias", "lenguajes", "stack", "herramientas"],
-            text: "Trabajo con SQL, MySQL, MariaDB, PostgreSQL, MongoDB, Node.js, JavaScript, Java, Python, HTML, CSS, Postman, Jira, DBeaver, Excel, Git, GitHub, AWS, n8n, Make y ChatGPT."
+            text: "Trabajo con SQL, MySQL, MariaDB, PostgreSQL, MongoDB, Node.js, JavaScript, Java, Python, HTML, CSS, Postman, Jira, Excel, Git, GitHub, AWS, n8n, Make y ChatGPT."
         },
         {
             match: ["experiencia", "trabajo", "trabajaste", "laboral"],
             text: "Actualmente trabajo en IBBA GROUP, en el sector fintech. Participo en soporte técnico, análisis operativo, validación de datos, revisión de logs, pruebas de APIs, seguimiento de tickets y documentación de mejoras."
+        },
+        {
+            match: ["mar studio", "studio", "servicios", "webs", "automatizacion", "automatización"],
+            text: "MAR Studio es mi espacio para crear sitios simples, automatizaciones y soluciones con IA pensadas para ordenar trabajo, comunicar mejor y reducir tareas repetitivas."
         },
         {
             match: ["estudias", "estudios", "formación", "formacion"],
@@ -65,7 +114,7 @@ function setupChatbot() {
         },
         {
             match: ["contactarte", "contacto", "email", "linkedin"],
-            text: "Podés escribirme a rosatomacarena@outlook.com o contactarme por LinkedIn: https://www.linkedin.com/in/macarena-ayelen-rosato/"
+            text: "Podés usar el botón de contacto del sitio o escribirme por LinkedIn: https://www.linkedin.com/in/macarena-ayelen-rosato/"
         },
         {
             match: ["dónde sos", "donde sos", "dónde eres", "donde eres"],
