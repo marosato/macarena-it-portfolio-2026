@@ -1,0 +1,283 @@
+[
+  {
+    "title": "Carrera de Desarrollo Backend",
+    "description": "Desarrollo de aplicaciones con JavaScript, Node.js, bases de datos SQL y NoSQL, arquitectura, autenticación, testing y despliegue.",
+    "en_title": "Backend Development Program",
+    "en_description": "Web application development with JavaScript, Node.js, SQL and NoSQL databases, architecture, authentication, testing and deployment.",
+    "provider": "Coderhouse",
+    "tags": [
+      "Node.js",
+      "MongoDB",
+      "SQL",
+      "React JS",
+      "Testing",
+      "Kubernetes"
+    ],
+    "links": [
+      {
+        "url": "programs/courses/coderhouse-carrera-desarrollo-backend.pdf",
+        "label": "Programa carrera",
+        "en_label": "Program syllabus"
+      },
+      {
+        "url": "programs/courses/coderhouse-backend-i.pdf",
+        "label": "Backend I",
+        "en_label": "Backend I"
+      },
+      {
+        "url": "programs/courses/coderhouse-backend-ii.pdf",
+        "label": "Backend II",
+        "en_label": "Backend II"
+      },
+      {
+        "url": "programs/courses/coderhouse-backend-iii.pdf",
+        "label": "Backend III",
+        "en_label": "Backend III"
+      }
+    ]
+  },
+  {
+    "title": "Carrera de AI Automation",
+    "description": "Formación enfocada en diseñar flujos de automatización con IA, herramientas no-code y low-code, Make, n8n, APIs, agentes, RAG, comunicación multicanal y proyectos integradores para negocios.",
+    "en_title": "AI Automation Program",
+    "en_description": "AI-powered workflows with no-code and low-code tools, Make, n8n, APIs, agents, RAG and multichannel communication.",
+    "provider": "Coderhouse",
+    "tags": [
+      "Make",
+      "n8n",
+      "OpenAI API",
+      "Claude API",
+      "RAG",
+      "WhatsApp API"
+    ],
+    "links": [
+      {
+        "url": "programs/courses/coderhouse-ai-automation.pdf",
+        "label": "Ver programa",
+        "en_label": "View syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1BmSvqdtOcbXYjYPlocOmw7Tx4DpnZ-Ql/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "AI Automation Avanzado",
+    "description": "Profundización en automatizaciones con IA, agentes, integraciones, manejo de datos, comunicación multicanal y criterios para llevar flujos a escenarios más completos.",
+    "en_title": "Advanced AI Automation",
+    "en_description": "AI agents, integrations, data handling and multichannel workflows for more complex automation scenarios.",
+    "provider": "Coderhouse",
+    "tags": [
+      "Agentes IA",
+      "n8n",
+      "APIs",
+      "RAG",
+      "Workflows"
+    ],
+    "links": [
+      {
+        "url": "programs/courses/coderhouse-ai-automation.pdf",
+        "label": "Ver programa",
+        "en_label": "View syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1867v1nRAgau81fNaGpVOvAe9sGbjE6SY/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "SQL",
+    "description": "Curso para trabajar bases de datos relacionales desde cero: diseño, consultas, joins, subconsultas, CTEs, funciones de ventana, vistas, transacciones, automatizaciones y reportes para análisis de negocio.",
+    "en_title": "SQL",
+    "en_description": "Relational database design, queries, joins, subqueries, CTEs, window functions, views, transactions and business reporting.",
+    "provider": "Coderhouse",
+    "tags": [
+      "PostgreSQL",
+      "Joins",
+      "CTEs",
+      "Window functions",
+      "Reportes"
+    ],
+    "links": [
+      {
+        "url": "programs/courses/coderhouse-sql.pdf",
+        "label": "Ver programa",
+        "en_label": "View syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1zOt8H4T-b4TeFVYAg548Gee37lQcRkWD/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript",
+    "description": "Curso práctico para crear interactividad web: variables, funciones, arrays, objetos, DOM, eventos, storage, asincronismo, promesas, Fetch API, librerías, Node.js y frameworks modernos.",
+    "en_title": "JavaScript",
+    "en_description": "Interactive web development with functions, arrays, objects, the DOM, events, storage, asynchronous code, promises and the Fetch API.",
+    "provider": "Coderhouse",
+    "tags": [
+      "DOM",
+      "Eventos",
+      "LocalStorage",
+      "Async/Await",
+      "Fetch API",
+      "Node.js"
+    ],
+    "links": [
+      {
+        "url": "programs/courses/coderhouse-javascript.pdf",
+        "label": "Ver programa",
+        "en_label": "View syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1AMdWbwK16uSP97J0DsYzWo1X0Vul1etM/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "Inteligencia Artificial y Productividad",
+    "description": "Uso de IA generativa para trabajar mejor: ChatGPT, Gemini, DeepSeek, NotebookLM, prompting, asistentes no-code, IA en documentos, planillas, presentaciones, generación multimedia y mirada ética.",
+    "en_title": "Artificial Intelligence & Productivity",
+    "en_description": "Practical generative AI, prompting, no-code assistants and AI tools for documents, spreadsheets, presentations and multimedia, with an ethical perspective.",
+    "provider": "EducaciónIT",
+    "tags": [
+      "LLMs",
+      "Prompting",
+      "NotebookLM",
+      "Asistentes IA",
+      "Productividad"
+    ],
+    "links": [
+      {
+        "url": "https://www.educacionit.com/curso-de-inteligencia-artificial-y-productividad",
+        "label": "Programa oficial",
+        "en_label": "Official syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1DOI1rTPgRzK2BRIGEVPJRZQDQ6onFU-9/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "Automatización y Agentes IA con n8n",
+    "description": "Diseño de workflows inteligentes con n8n, agentes de IA, LLMs, APIs, webhooks, integraciones con herramientas de negocio, leads, interfaces low-code, cloud, Docker, monitoreo y buenas prácticas de producción.",
+    "en_title": "Automation & AI Agents with n8n",
+    "en_description": "Intelligent workflows, AI agents, LLMs, APIs, webhooks, business integrations, Docker, cloud deployment and monitoring.",
+    "provider": "EducaciónIT",
+    "tags": [
+      "n8n",
+      "Webhooks",
+      "LLMs",
+      "APIs",
+      "Docker",
+      "Cloud"
+    ],
+    "links": [
+      {
+        "url": "https://www.educacionit.com/curso-de-automatizacion-y-agentes-ia-con-n8n",
+        "label": "Programa oficial",
+        "en_label": "Official syllabus"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1ZNJXrRq-eDBTvG-M9agVnVap3oYLXXwf/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "Desarrollo Full Stack Java",
+    "description": "Formación para construir aplicaciones web full stack con base frontend, lógica backend en Java, conexión con bases de datos y práctica de proyecto integrador.",
+    "en_title": "Full Stack Java Development",
+    "en_description": "Full stack web development combining frontend foundations, Java backend logic, databases and an integrated project.",
+    "provider": "Codo a Codo 4.0",
+    "tags": [
+      "Java",
+      "Backend",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bases de datos"
+    ],
+    "links": [
+      {
+        "url": "https://drive.google.com/file/d/1ke-i0Sh26L5mIrwQ2ybdQWffPB6xq-KL/view?usp=sharing",
+        "label": "Ver diploma",
+        "en_label": "View diploma"
+      }
+    ]
+  },
+  {
+    "title": "Desarrollo Full Stack Python",
+    "description": "Formación full stack con base web, programación en Python, lógica backend, bases de datos y desarrollo de un proyecto integrador.",
+    "en_title": "Full Stack Python Development",
+    "en_description": "Frontend and backend development with Python, databases and deployment, applied through a full stack project.",
+    "provider": "Codo a Codo 4.0",
+    "tags": [
+      "Python",
+      "Backend",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bases de datos"
+    ],
+    "links": [
+      {
+        "url": "https://drive.google.com/file/d/1RtmGiXOD-t3jRtAb7awJQR_da1gZIypd/view?usp=sharing",
+        "label": "Ver diploma",
+        "en_label": "View diploma"
+      }
+    ]
+  },
+  {
+    "title": "AWS Cloud Computing",
+    "description": "Base de cloud computing para entender servicios principales de AWS, infraestructura, despliegues y administración de recursos.",
+    "en_title": "AWS Cloud Computing",
+    "en_description": "Cloud computing foundations, EC2, S3, networking, storage, security and practical cloud infrastructure concepts.",
+    "provider": "UTN.BA",
+    "tags": [
+      "AWS",
+      "EC2",
+      "S3",
+      "Cloud",
+      "Infraestructura"
+    ],
+    "links": [
+      {
+        "url": "https://drive.google.com/file/d/1p8z6OlBkHjHP2iImPvj5spo6-GAqqY0F/view?usp=sharing",
+        "label": "Ver certificado",
+        "en_label": "View certificate"
+      }
+    ]
+  },
+  {
+    "title": "Habilidades Blandas",
+    "description": "Curso orientado a comunicación, organización y trabajo en equipo. Me ayuda a explicar problemas, pedir contexto y compartir avances con claridad.",
+    "en_title": "Soft Skills",
+    "en_description": "Communication, organization, teamwork and adaptability to explain problems and share progress clearly.",
+    "provider": "Accenture",
+    "tags": [
+      "Comunicación",
+      "Trabajo en equipo",
+      "Organización",
+      "Adaptabilidad"
+    ],
+    "links": [
+      {
+        "url": "https://drive.google.com/file/d/1l_wFiEo5tLDrgxcB--im4RdJU8NT9624/view?usp=sharing",
+        "label": "Ver diploma",
+        "en_label": "View diploma"
+      }
+    ]
+  }
+]
